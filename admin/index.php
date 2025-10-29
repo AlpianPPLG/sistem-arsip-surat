@@ -21,7 +21,7 @@ include "login/ceksession.php";
     <link href="../assets/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="../assets/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-	
+
     <!-- bootstrap-progressbar -->
     <link href="../assets/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
@@ -166,6 +166,6 @@ include "login/ceksession.php";
 
     <!-- Custom Theme Scripts -->
     <script src="../assets/build/js/custom.min.js"></script>
-	
+
   </body>
 </html>

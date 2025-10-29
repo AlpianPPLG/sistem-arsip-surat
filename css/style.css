@@ -5,15 +5,76 @@
     Author URL: https://bootstrapmade.com
 */
 
-body {
-	line-height: 1.4;
-	font-family: 'Roboto', sans-serif;
-    color: #67696c;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    overflow-x: hidden;
+/* Theme variables (light by default) */
+:root {
+    --bg: #ffffff;
+    --panel-bg: #ffffff;
+    --text: #67696c;
+    --muted: #9aa0a6;
+    --accent: #be9e21; /* default gold */
+    --sidebar-bg: #2f4250;
+    --navbar-bg: rgba(64,75,97,0.9);
 }
+
+/* Dark theme variables */
+.theme-dark {
+    --bg: #0b1116;
+    --panel-bg: #0f1720;
+    --text: #cbd5e1;
+    --muted: #94a3b8;
+    --accent: #f59e0b; /* slightly brighter accent for dark */
+    --sidebar-bg: #1c2b33;
+    --navbar-bg: rgba(10,15,20,0.9);
+}
+
+/* Make body respond to variables */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 220ms ease, color 220ms ease;
+}
+
+/* Panels / service areas */
+#service {
+    background-color: var(--panel-bg);
+}
+
+/* Accent-aware elements */
+.btn-download { background-color: var(--accent); }
+.bottom-line { background-color: var(--accent); }
+.sec-sub-title { color: var(--accent); }
+.service-item a { color: var(--accent); }
+.visit-portfolio { border-color: color-mix(in srgb, var(--accent) 20%, #838aa1); }
+
+/* Navbar and brand */
+.navbar-default .navbar-brand { color: var(--accent); }
+.top-nav-collapse { background: var(--navbar-bg); }
+
+/* Small UI for theme controls inserted in header */
+.theme-controls { display:flex; align-items:center; gap:8px; padding-right:6px; }
+.theme-toggle-btn {
+    background: transparent;
+    border: 0;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 6px 8px;
+}
+.theme-palette { display:flex; gap:6px; align-items:center; }
+.theme-swatch {
+    width:18px; height:18px; border-radius:50%; cursor:pointer; border:2px solid rgba(255,255,255,0.12);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.05) inset;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.theme-swatch:hover { transform: scale(1.08); }
+.theme-swatch.selected { box-shadow: 0 0 0 3px rgba(0,0,0,0.12) inset; }
+
+/* Adjustments for dark sidebar if used by templates */
+.sidebar, .left_col {
+    background-color: var(--sidebar-bg);
+    transition: background-color 220ms ease;
+}
+
 ol, ul {
 	list-style: none;
 }

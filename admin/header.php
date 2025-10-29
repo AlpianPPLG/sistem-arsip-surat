@@ -12,6 +12,20 @@ $data 		= mysqli_fetch_array($query);
               </div>
 
               <ul class="nav navbar-nav navbar-right">
+                <!-- Theme controls: toggle + palette -->
+                <li class="">
+                  <div class="theme-controls" style="display:flex;align-items:center;">
+                    <button id="themeToggle" class="theme-toggle-btn" title="Toggle dark mode"><i class="fa fa-moon-o" aria-hidden="true"></i></button>
+                    <div class="theme-palette" id="themePalette" aria-label="Choose accent color">
+                      <span class="theme-swatch" data-color="#be9e21" style="background:#be9e21" title="Gold"></span>
+                      <span class="theme-swatch" data-color="#06b6d4" style="background:#06b6d4" title="Cyan"></span>
+                      <span class="theme-swatch" data-color="#6366f1" style="background:#6366f1" title="Indigo"></span>
+                      <span class="theme-swatch" data-color="#ef4444" style="background:#ef4444" title="Red"></span>
+                      <span class="theme-swatch" data-color="#10b981" style="background:#10b981" title="Green"></span>
+                    </div>
+                  </div>
+                </li>
+
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                     <img src="images/<?php echo $data['gambar']; ?>" alt=""><?php echo $_SESSION['nama'];?>
